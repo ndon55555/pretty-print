@@ -40,15 +40,14 @@ fun <T> T.pp(indent: Int = defaultIndentSize, writeTo: Appendable = defaultAppen
     this.also { pp(it, indent, writeTo) }
 
 /**
- * Pretty prints any object. `collectionElementPad` is how much more to indent the contents of a collection.
+ * Pretty prints any object. `currentPad` is how much more to indent the contents of a collection.
  * `objectFieldPad` is how much to indent the fields of an object.
  */
 private fun ppAny(
     obj: Any?,
     visited: MutableSet<Int>,
     revisited: MutableSet<Int>,
-    collectionElementPad: String = "",
-    objectFieldPad: String = collectionElementPad
+    currentPad: String = ""
 ) {
     val id = System.identityHashCode(obj)
 
@@ -61,11 +60,11 @@ private fun ppAny(
     if (!isAtomic(obj)) visited.add(id)
 
     when {
-        obj is Iterable<*> -> ppIterable(obj, visited, revisited, collectionElementPad)
-        obj is Map<*, *> -> ppMap(obj, visited, revisited, collectionElementPad)
-        obj is String -> ppString(obj, collectionElementPad)
+        obj is Iterable<*> -> ppIterable(obj, visited, revisited, currentPad)
+        obj is Map<*, *> -> ppMap(obj, visited, revisited, currentPad)
+        obj is String -> ppString(obj, currentPad)
         isAtomic(obj) -> ppAtomic(obj)
-        obj is Any -> ppPlainObject(obj, visited, revisited, objectFieldPad)
+        obj is Any -> ppPlainObject(obj, visited, revisited, currentPad)
     }
 
     visited.remove(id)
@@ -118,19 +117,20 @@ private fun ppPlainObject(obj: Any, visited: MutableSet<Int>, revisited: Mutable
         .ppContents(currentDepth) {
             it.isAccessible = true
             write("$increasedDepth${it.name} = ")
-            val extraIncreasedDepth = deepen(increasedDepth, it.name.length + 3) // 3 is " = ".length in prev line
             val fieldValue = it.get(obj)
             logger.debug { "field value is ${fieldValue.javaClass}" }
-            ppAny(fieldValue, visited, revisited, extraIncreasedDepth, increasedDepth)
+            ppAny(fieldValue, visited, revisited, increasedDepth)
         }
     write(')')
 }
 
 private fun ppString(s: String, currentDepth: String) {
+    val increasedDepth = deepen(currentDepth)
+
     if (s.length > DEFAULT_WRAP_WIDTH) {
         val tripleDoubleQuotes = "\"\"\""
         writeLine(tripleDoubleQuotes)
-        writeLine("$currentDepth${wordWrap(s, currentDepth)}")
+        writeLine("$increasedDepth${wordWrap(s, increasedDepth)}")
         write("$currentDepth$tripleDoubleQuotes")
     } else {
         write("\"$s\"")

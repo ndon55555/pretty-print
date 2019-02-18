@@ -68,10 +68,10 @@ object CycleDetectionTest : Spek({
                 prettyPrint(objectWithMap) mapsTo """
                 ObjectWithMap(
                   map = {
-                          1 -> ObjectContainingObjectWithMap(
-                            objectWithMap = cyclic reference detected for $identity
-                          )
-                        }
+                    1 -> ObjectContainingObjectWithMap(
+                      objectWithMap = cyclic reference detected for $identity
+                    )
+                  }
                 )[${'$'}id=$identity]
                 """.trimIndent()
             }
@@ -99,10 +99,10 @@ object CycleDetectionTest : Spek({
                 prettyPrint(objectWithList) mapsTo """
                 ObjectWithList(
                   list = [
-                           ObjectContainingObjectWithList(
-                             objectWithList = cyclic reference detected for $identity
-                           )
-                         ]
+                    ObjectContainingObjectWithList(
+                      objectWithList = cyclic reference detected for $identity
+                    )
+                  ]
                 )[${'$'}id=$identity]
                 """.trimIndent()
             }

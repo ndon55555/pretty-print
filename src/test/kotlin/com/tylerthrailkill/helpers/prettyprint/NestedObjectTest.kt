@@ -75,8 +75,8 @@ object NestedObjectTest : Spek({
             ) mapsTo """
                 NestedObjectWithCollection(
                   coll = [
-                           1
-                         ]
+                    1
+                  ]
                 )
                 """
         }
@@ -89,8 +89,8 @@ object NestedObjectTest : Spek({
             ) mapsTo """
                 NestedObjectWithCollection(
                   coll = [
-                           "a string with spaces"
-                         ]
+                    "a string with spaces"
+                  ]
                 )
                 """
         }
@@ -103,9 +103,9 @@ object NestedObjectTest : Spek({
             ) mapsTo """
                 NestedObjectWithCollection(
                   coll = [
-                           1,
-                           2
-                         ]
+                    1,
+                    2
+                  ]
                 )
                 """
         }
@@ -118,13 +118,13 @@ object NestedObjectTest : Spek({
             ) mapsTo """
                 NestedObjectWithCollection(
                   coll = [
-                           NestedSmallObject(
-                             smallObject = SmallObject(
-                               field1 = "a"
-                               field2 = 1
-                             )
-                           )
-                         ]
+                    NestedSmallObject(
+                      smallObject = SmallObject(
+                        field1 = "a"
+                        field2 = 1
+                      )
+                    )
+                  ]
                 )
                 """
         }
@@ -142,31 +142,31 @@ object NestedObjectTest : Spek({
             ) mapsTo """
                 NestedObjectWithCollection(
                   coll = [
-                           NestedSmallObject(
-                             smallObject = SmallObject(
-                               field1 = "a"
-                               field2 = 1
-                             )
-                           ),
-                           NestedSmallObject(
-                             smallObject = SmallObject(
-                               field1 = "a"
-                               field2 = 1
-                             )
-                           ),
-                           NestedSmallObject(
-                             smallObject = SmallObject(
-                               field1 = "a"
-                               field2 = 1
-                             )
-                           ),
-                           NestedSmallObject(
-                             smallObject = SmallObject(
-                               field1 = "a"
-                               field2 = 1
-                             )
-                           )
-                         ]
+                    NestedSmallObject(
+                      smallObject = SmallObject(
+                        field1 = "a"
+                        field2 = 1
+                      )
+                    ),
+                    NestedSmallObject(
+                      smallObject = SmallObject(
+                        field1 = "a"
+                        field2 = 1
+                      )
+                    ),
+                    NestedSmallObject(
+                      smallObject = SmallObject(
+                        field1 = "a"
+                        field2 = 1
+                      )
+                    ),
+                    NestedSmallObject(
+                      smallObject = SmallObject(
+                        field1 = "a"
+                        field2 = 1
+                      )
+                    )
+                  ]
                 )
                 """
         }

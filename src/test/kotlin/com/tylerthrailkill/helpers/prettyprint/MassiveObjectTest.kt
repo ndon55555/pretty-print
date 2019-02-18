@@ -101,829 +101,829 @@ object MassiveObjectTest : Spek({
 MassiveObject(
   astring = "a string"
   listOfObject = [
-                   AValueObject(
-                     uuid = b2558c12-d4d3-4abd-94e4-8600902f1edf
-                     number = 1
-                     emailAddresses = [
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "a@b.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "🎃@zack.is"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "ñoñó1234@server.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "δοκιμή@παράδειγμα.δοκιμή"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "我買@屋企.香港"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "二ノ宮@黒川.日本"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "чебурашка@ящик-с-апельсинами.рф"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "संपर्क@डाटामेल.भारत"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "simple@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "very.common@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "disposable.style.email.with+symbol@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "other.email-with-hyphen@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "fully-qualified-domain@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "user.name+tag+sorting@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "x@example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "example-indeed@strange-example.com"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "admin@mailserver1"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "example@s.example"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = "" "@example.org"
-                                        ),
-                                        EmailAddress(
-                                          serialVersionUUID = 1
-                                          emailAddress = ""john..doe"@example.org"
-                                        )
-                                      ]
-                     nestedObjectsListToMap = [
-                                                {
-                                                  "a" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "b" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "c" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                },
-                                                {
-                                                  "d" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "e" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "f" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                },
-                                                {
-                                                  "g" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "h" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  "i" -> NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                }
-                                              ]
-                     nestedObjectsMapToList = {
-                                                "listA" -> [
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                ],
-                                                "listB" -> [
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                ],
-                                                "listC" -> [
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  ),
-                                                  NestedLargeObject(
-                                                    nestedSmallObject = NestedSmallObject(
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                    )
-                                                    smallObject = SmallObject(
-                                                      field1 = "a string in small object"
-                                                      field2 = 777
-                                                    )
-                                                    testString = "test string, please don't break"
-                                                    bigObject = NestedLargeObject(
-                                                      nestedSmallObject = NestedSmallObject(
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                      )
-                                                      smallObject = SmallObject(
-                                                        field1 = "a string in small object"
-                                                        field2 = 777
-                                                      )
-                                                      testString = "test string, please don't break"
-                                                      bigObject = NestedLargeObject(
-                                                        nestedSmallObject = NestedSmallObject(
-                                                          smallObject = SmallObject(
-                                                            field1 = "a string in small object"
-                                                            field2 = 777
-                                                          )
-                                                        )
-                                                        smallObject = SmallObject(
-                                                          field1 = "a string in small object"
-                                                          field2 = 777
-                                                        )
-                                                        testString = "test string, please don't break"
-                                                        bigObject = null
-                                                      )
-                                                    )
-                                                  )
-                                                ]
-                                              }
-                   )
-                 ]
+    AValueObject(
+      uuid = b2558c12-d4d3-4abd-94e4-8600902f1edf
+      number = 1
+      emailAddresses = [
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "a@b.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "🎃@zack.is"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "ñoñó1234@server.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "δοκιμή@παράδειγμα.δοκιμή"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "我買@屋企.香港"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "二ノ宮@黒川.日本"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "чебурашка@ящик-с-апельсинами.рф"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "संपर्क@डाटामेल.भारत"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "simple@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "very.common@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "disposable.style.email.with+symbol@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "other.email-with-hyphen@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "fully-qualified-domain@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "user.name+tag+sorting@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "x@example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "example-indeed@strange-example.com"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "admin@mailserver1"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "example@s.example"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = "" "@example.org"
+        ),
+        EmailAddress(
+          serialVersionUUID = 1
+          emailAddress = ""john..doe"@example.org"
+        )
+      ]
+      nestedObjectsListToMap = [
+        {
+          "a" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "b" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "c" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        },
+        {
+          "d" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "e" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "f" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        },
+        {
+          "g" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "h" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          "i" -> NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        }
+      ]
+      nestedObjectsMapToList = {
+        "listA" -> [
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        ],
+        "listB" -> [
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        ],
+        "listC" -> [
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          ),
+          NestedLargeObject(
+            nestedSmallObject = NestedSmallObject(
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+            )
+            smallObject = SmallObject(
+              field1 = "a string in small object"
+              field2 = 777
+            )
+            testString = "test string, please don't break"
+            bigObject = NestedLargeObject(
+              nestedSmallObject = NestedSmallObject(
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+              )
+              smallObject = SmallObject(
+                field1 = "a string in small object"
+                field2 = 777
+              )
+              testString = "test string, please don't break"
+              bigObject = NestedLargeObject(
+                nestedSmallObject = NestedSmallObject(
+                  smallObject = SmallObject(
+                    field1 = "a string in small object"
+                    field2 = 777
+                  )
+                )
+                smallObject = SmallObject(
+                  field1 = "a string in small object"
+                  field2 = 777
+                )
+                testString = "test string, please don't break"
+                bigObject = null
+              )
+            )
+          )
+        ]
+      }
+    )
+  ]
 )
                 """
         }

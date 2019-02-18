@@ -12,8 +12,8 @@ object MultilineStringTest : Spek({
                 val s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a"
                 prettyPrint(s) mapsTo """
                     ${"\"\"\""}
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    a
+                      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                      a
                     ${"\"\"\""}
                     """
             }
@@ -28,10 +28,10 @@ object MultilineStringTest : Spek({
                 ) mapsTo """
                 SmallObject(
                   field1 = ${"\"\"\""}
-                           Yes, if you make it look like an electrical fire. When you do things right,
-                           people won't be sure you've done anything at all. Too much work. Let's burn it
-                           and say we dumped it in the sewer. Goodbye, cruel world. Goodbye, cruel lamp.
-                           ${"\"\"\""}
+                    Yes, if you make it look like an electrical fire. When you do things right,
+                    people won't be sure you've done anything at all. Too much work. Let's burn it
+                    and say we dumped it in the sewer. Goodbye, cruel world. Goodbye, cruel lamp.
+                  ${"\"\"\""}
                   field2 = 1
                 )
                 """
@@ -47,8 +47,8 @@ object MultilineStringTest : Spek({
                 ) mapsTo """
                     [
                       ${"\"\"\""}
-                      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                      a
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        a
                       ${"\"\"\""}
                     ]
                     """
@@ -65,11 +65,11 @@ object MultilineStringTest : Spek({
                 ) mapsTo """
                     {
                       ${"\"\"\""}
-                      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                      a
+                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        a
                       ${"\"\"\""} -> ${"\"\"\""}
-                      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-                      b
+                        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                        b
                       ${"\"\"\""}
                     }
                     """

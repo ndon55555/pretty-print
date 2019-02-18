@@ -2,7 +2,6 @@ package com.tylerthrailkill.helpers.prettyprint
 
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
-import java.io.ByteArrayOutputStream
 
 object CollectionsTest : Spek({
     setup()
@@ -37,10 +36,10 @@ object CollectionsTest : Spek({
             prettyPrint(NullableLists(listOf(null, null, null))) mapsTo """
             NullableLists(
               col = [
-                      null,
-                      null,
-                      null
-                    ]
+                null,
+                null,
+                null
+              ]
             )
             """
         }
@@ -48,13 +47,13 @@ object CollectionsTest : Spek({
             prettyPrint(NullableLists(listOf(null, 1, null, "a", null, true))) mapsTo """
             NullableLists(
               col = [
-                      null,
-                      1,
-                      null,
-                      "a",
-                      null,
-                      true
-                    ]
+                null,
+                1,
+                null,
+                "a",
+                null,
+                true
+              ]
             )
             """
         }
@@ -62,10 +61,10 @@ object CollectionsTest : Spek({
             prettyPrint(NullableLists(listOf(TinyObject(1)))) mapsTo """
             NullableLists(
               col = [
-                      TinyObject(
-                        int = 1
-                      )
-                    ]
+                TinyObject(
+                  int = 1
+                )
+              ]
             )
             """
         }
@@ -81,16 +80,16 @@ object CollectionsTest : Spek({
             ) mapsTo """
             NullableLists(
               col = [
-                      TinyObject(
-                        int = 1
-                      ),
-                      TinyObject(
-                        int = 2
-                      ),
-                      TinyObject(
-                        int = 3
-                      )
-                    ]
+                TinyObject(
+                  int = 1
+                ),
+                TinyObject(
+                  int = 2
+                ),
+                TinyObject(
+                  int = 3
+                )
+              ]
             )
             """
         }
@@ -106,19 +105,19 @@ object CollectionsTest : Spek({
             ) mapsTo """
             NullableLists(
               col = [
-                      {
-                        1 -> 2,
-                        3 -> 4
-                      },
-                      {
-                        5 -> 6,
-                        7 -> 8
-                      },
-                      {
-                        9 -> 0,
-                        0 -> 1
-                      }
-                    ]
+                {
+                  1 -> 2,
+                  3 -> 4
+                },
+                {
+                  5 -> 6,
+                  7 -> 8
+                },
+                {
+                  9 -> 0,
+                  0 -> 1
+                }
+              ]
             )
             """
         }
