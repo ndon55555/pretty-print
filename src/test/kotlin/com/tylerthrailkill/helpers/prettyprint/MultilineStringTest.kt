@@ -9,9 +9,10 @@ object MultilineStringTest : Spek({
     describe("really long string reformatting") {
         context("when the long string is not part of another object") {
             it("renders as a multiline string") {
-                val s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a"
+                val s = "a aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a"
                 prettyPrint(s) mapsTo """
                     ${"\"\"\""}
+                      a
                       aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                       a
                     ${"\"\"\""}

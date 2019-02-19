@@ -75,6 +75,9 @@ private fun ppAny(
     }
 }
 
+/**
+ * TODO
+ */
 private fun isAtomic(o: Any?): Boolean =
     o == null
             || o is Char || o is Number || o is Boolean || o is BigInteger || o is BigDecimal || o is UUID
@@ -84,14 +87,15 @@ private fun isAtomic(o: Any?): Boolean =
  * of an application to each element is on its own line, separated by a separator. `currentDepth` specifies the
  * indentation level of any closing bracket.
  */
-private fun <T> Iterable<T>.ppContents(currentDepth: String, separator: String = "", f: (T) -> Unit) {
+private fun <T> Iterable<T>.ppContents(currentDepth: String, separator: String = "", f: (T, String) -> Unit) {
     val list = this.toMutableList()
+    val increasedDepth = deepen(currentDepth)
 
     if (!list.isEmpty()) {
-        f(list.removeAt(0))
+        f(list.removeAt(0), increasedDepth)
         list.forEach {
             writeLine(separator)
-            f(it)
+            f(it, increasedDepth)
         }
         writeLine()
     }
@@ -99,6 +103,9 @@ private fun <T> Iterable<T>.ppContents(currentDepth: String, separator: String =
     write(currentDepth)
 }
 
+/**
+ * TODO
+ */
 private fun ppAtomic(obj: Any?) {
     write(obj.toString())
 }
@@ -107,46 +114,30 @@ private fun ppAtomic(obj: Any?) {
  * Pretty print a plain object.
  */
 private fun ppPlainObject(obj: Any, visited: MutableSet<Int>, revisited: MutableSet<Int>, currentDepth: String) {
-    val increasedDepth = deepen(currentDepth)
     val className = obj.javaClass.simpleName
 
     writeLine("$className(")
     obj.javaClass.declaredFields
         .filterNot { it.isSynthetic }
         .toList()
-        .ppContents(currentDepth) {
-            it.isAccessible = true
-            write("$increasedDepth${it.name} = ")
-            val fieldValue = it.get(obj)
+        .ppContents(currentDepth) { field, pad ->
+            field.isAccessible = true
+            write("$pad${field.name} = ")
+            val fieldValue = field.get(obj)
             logger.debug { "field value is ${fieldValue.javaClass}" }
-            ppAny(fieldValue, visited, revisited, increasedDepth)
+            ppAny(fieldValue, visited, revisited, pad)
         }
     write(')')
-}
-
-private fun ppString(s: String, currentDepth: String) {
-    val increasedDepth = deepen(currentDepth)
-
-    if (s.length > DEFAULT_WRAP_WIDTH) {
-        val tripleDoubleQuotes = "\"\"\""
-        writeLine(tripleDoubleQuotes)
-        writeLine("$increasedDepth${wordWrap(s, increasedDepth)}")
-        write("$currentDepth$tripleDoubleQuotes")
-    } else {
-        write("\"$s\"")
-    }
 }
 
 /**
  * Pretty print an Iterable.
  */
 private fun ppIterable(obj: Iterable<*>, visited: MutableSet<Int>, revisited: MutableSet<Int>, currentDepth: String) {
-    val increasedDepth = deepen(currentDepth)
-
     writeLine('[')
-    obj.ppContents(currentDepth, ",") {
-        write(increasedDepth)
-        ppAny(it, visited, revisited, increasedDepth)
+    obj.ppContents(currentDepth, ",") { element, pad ->
+        write(pad)
+        ppAny(element, visited, revisited, pad)
     }
     write(']')
 }
@@ -155,16 +146,60 @@ private fun ppIterable(obj: Iterable<*>, visited: MutableSet<Int>, revisited: Mu
  * Pretty print a Map.
  */
 private fun ppMap(obj: Map<*, *>, visited: MutableSet<Int>, revisited: MutableSet<Int>, currentDepth: String) {
-    val increasedDepth = deepen(currentDepth)
-
     writeLine('{')
-    obj.entries.ppContents(currentDepth, ",") {
-        write(increasedDepth)
-        ppAny(it.key, visited, revisited, increasedDepth)
+    obj.entries.ppContents(currentDepth, ",") { entry, pad ->
+        write(pad)
+        ppAny(entry.key, visited, revisited, pad)
         write(" -> ")
-        ppAny(it.value, visited, revisited, increasedDepth)
+        ppAny(entry.value, visited, revisited, pad)
     }
     write('}')
+}
+
+/**
+ * TODO
+ */
+private fun ppString(s: String, currentDepth: String) {
+    if (s.length > DEFAULT_WRAP_WIDTH) {
+        val tripleDoubleQuotes = "\"\"\""
+        writeLine(tripleDoubleQuotes)
+        s.split(' ').getLines().ppContents(currentDepth) { line, pad ->
+            write(pad)
+            write(line)
+        }
+        write(tripleDoubleQuotes)
+    } else {
+        write("\"$s\"")
+    }
+}
+
+/**
+ * TODO
+ */
+private tailrec fun List<String>.getLines(acc: MutableList<String> = mutableListOf()): List<String> = when {
+    this.isEmpty() -> acc
+    else -> {
+        val firstLine = this.getFirstLine()
+        acc.add(firstLine.joinToString(" "))
+        this.subList(firstLine.size, this.size).getLines(acc)
+    }
+}
+
+/**
+ * TODO
+ */
+private tailrec fun List<String>.getFirstLine(
+    wrapWidth: Int = DEFAULT_WRAP_WIDTH,
+    acc: MutableList<String> = mutableListOf()
+): List<String> = when {
+    this.isEmpty() -> acc
+    (1 + this.first().length) in wrapWidth..DEFAULT_WRAP_WIDTH -> acc
+    (1 + this.first().length) > DEFAULT_WRAP_WIDTH && !acc.isEmpty() -> acc
+    else -> {
+        acc.add(this.first())
+        val spacesLeft = wrapWidth - (1 + this.first().length)
+        this.subList(1, this.size).getFirstLine(spacesLeft, acc)
+    }
 }
 
 /**
@@ -184,24 +219,7 @@ private fun write(str: Any?) {
 }
 
 /**
- * Generates a deeper string based on the current depth and tab size
+ * TODO
  */
-private fun wordWrap(text: String, padding: String): String {
-    val words = text.split(' ')
-    val sb = StringBuilder(words.first())
-    var spaceLeft = DEFAULT_WRAP_WIDTH - words.first().length
-    for (word in words.drop(1)) {
-        val len = word.length
-        if (len + 1 > spaceLeft) {
-            sb.append("\n").append(padding).append(word)
-            spaceLeft = DEFAULT_WRAP_WIDTH - len
-        } else {
-            sb.append(" ").append(word)
-            spaceLeft -= (len + 1)
-        }
-    }
-    return sb.toString()
-}
-
 private fun deepen(currentDepth: String, size: Int = defaultIndentSize): String =
     " ".repeat(size) + currentDepth
